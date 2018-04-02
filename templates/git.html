@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>git</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* Solarized (Dark) */
+/* Authors: Ethan Schoonover: http://ethanschoonover.com/solarized, CodeCatalyst: http://codecatalyst.com/ */
+/* Version: d9a83f4e7a47432baff86e1e7946d9e066cf3d1b (modified) */
+/* https://github.com/CodeCatalyst/mou-theme-solarized */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  color-profile: sRGB;
+}
+body {
+  min-width: 32em;
+  max-width: 52em;
+  margin: 10px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+}
+li {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+h2 {
+  border-bottom: 1px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #839496;
+}
+html body {
+  background-color: #002b36;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #93a1a1;
+  border-color: #839496;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #93a1a1;
+}
+html a:hover {
+  background-color: #073642;
+}
+html pre {
+  color: #93a1a1;
+  background-color: #073642;
+}
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #b58900;
+}
+html h1 {
+  color: #b58900;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #b58900;
+}
+
+/*
+LICENSE
+
+Solarized Theme for Mou
+
+Copyright (c) 2012 CodeCatalyst, LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Solarized
+
+Copyright (c) 2011 Ethan Schoonover
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+</style>
+</head>
+<body>
+<h3>Git是分布式版本控制系统 自报家门</h3>
+<pre><code>git config --global user.name &quot;Sajor&quot;
+git config --global user.email &quot;565785929@qq.com&quot;
+</code></pre>
+
+<h2>一</h2>
+<p>初始化一个Git仓库，使用git init命令。</p>
+<p>添加文件到Git仓库，分两步：</p>
+<p>第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；</p>
+<p>第二步，使用命令git commit，完成。</p>
+<h3>windows中的换行符为 CRLF， 而在linux下的换行符为LF，所以在执行add . 时出现提示，解决办法：</h3>
+<pre><code>rm -rf .git  // 删除.git  
+git config --global core.autocrlf false  //禁用自动转换    
+
+git init    // 重新执行
+git add .  
+</code></pre>
+
+<h3>文件添加到仓库 add</h3>
+<pre><code>git add readme.txt     // filename = readme.txt
+</code></pre>
+
+<h3>用命令 git commit 告诉Git 文件提交到仓库</h3>
+<pre><code>git commit -m &quot;wrote a readme file&quot; 
+-m后面输入的是本次提交的说明
+commit可以一次提交很多文件，所以你可以多次add不同的文件
+</code></pre>
+
+<hr />
+<h2>二</h2>
+<p>要随时掌握工作区的状态，使用git status命令。</p>
+<p>如果git status告诉你有文件被修改过，用git diff可以查看修改内容。</p>
+<h3>git status 查看当前状态</h3>
+<pre><code>git status 
+</code></pre>
+
+<h3>git diff 查看做了哪些修改</h3>
+<pre><code>git diff readme.txt    // filename = readme.txt
+git diff    #是工作区(work dict)和暂存区(stage)的比较
+git diff --cached    #是暂存区(stage)和分支(master)的比较（add之后）
+</code></pre>
+
+<hr />
+<h2>三</h2>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。</p>
+<p>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。</p>
+<p>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
+<h3>git log 显示从最近到最远的提交日志</h3>
+<pre><code>git log 
+// --pretty=oneline参数 可以在一行显示
+git log --pretty=oneline 
+前面的是commit id（版本号）
+</code></pre>
+
+<h3>回退版本</h3>
+<pre><code>git reset -- hard HEAD^  
+// 上一个版本是HEAD^ , 上上一个版本就是HEAD^^, 往上100个是HEAD~100
+</code></pre>
+
+<h3>再返回未来的版本可以用commit id 返回</h3>
+<pre><code>git reset --hard 3628164  // commit id = 3628164
+</code></pre>
+
+<h3>git reflog 记录你的每一次命令</h3>
+<pre><code>git reflog  前面会加你的commit id
+</code></pre>
+
+<hr />
+<h2>四</h2>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
+<p>命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</p>
+<h3>撤销工作区的修改</h3>
+<pre><code>git checkout -- readme.txt   // filename = readme.txt
+</code></pre>
+
+<h3>撤销缓存区的提交</h3>
+<pre><code>git reset HEAD readme.txt   // filename = readme.txt
+</code></pre>
+
+<h3>工作区删除</h3>
+<pre><code>rm test.txt
+</code></pre>
+
+<h3>从版本库中删除该文件 git rm 删掉 并提交</h3>
+<pre><code>git rm test.txt    // filename = test.txt
+git commit -m &quot;remove test.txt&quot;
+</code></pre>
+
+<h3>也可以使用 git checkout 恢复</h3>
+<pre><code>git checkout -- test.txt
+</code></pre>
+
+<hr />
+<h2>五</h2>
+<p>要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；</p>
+<p>关联后，使用命令git push -u origin master第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；</p>
+<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
+<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。
+Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。</p>
+<h3>在GitHub 添加ssh秘钥</h3>
+<pre><code>ssh-keygen -t rsa    生成ssh秘钥 
+cat C://Users/zzx/.ssh/id_rsa.pub   默认位置
+</code></pre>
+
+<h3>推送到远程仓库</h3>
+<pre><code>git remote add origin git@github.com:565785929/learngit.git
+git push -u origin master
+</code></pre>
+
+<h3>本地做了提交再更新远程仓库</h3>
+<pre><code>git push origin master 
+</code></pre>
+
+<h3>远程库已经准备好了 git clone克隆一个本地库</h3>
+<pre><code>git clone git@github.com:565785929/gitskills.git     // proname = gitskills
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

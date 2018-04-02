@@ -1,0 +1,16 @@
+<!-- footer.html -->
+{% block footer %}
+    {% if now %}
+        <p>Now: {{ now }}</p>
+    {% else %}
+        <p>本文取自网络</p>
+    {% endif %}
+
+    <!-- {% if hour > 18 %}
+        good night 
+    {% elif hour < 10 %}
+        good morning
+    {% else %}
+        good run
+    {% endif %} -->
+{% endblock %}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    {% load staticfiles %}
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery表头固定和自定义滚动条的表格美化DEMO演示</title>
+  
+  <link rel="stylesheet" href="{% static "css/reset.min.css" %}">
+
+  
+      <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+  
+</head>
+
+<body>
+  <section>
+  <!--for demo wrap-->
+  <h1>Fixed Table header</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>title</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for i in posts %}
+        <tr>
+          <td>{{i.id}}</td>
+          <td><a href='/post/{{ i.id }}'>{{i.title}}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div style="text-align:center;clear:both">
+<script src="{% static "/gg_bd_ad_720x90.js" %}" type="text/javascript"></script>
+<script src="{% static "/follow.js" %}" type="text/javascript"></script>
+</div>
+
+<!-- follow me template -->
+<div class="made-with-love">
+  Made with
+  <i>♥</i> by
+  <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan</a>
+</div>
+  <script src="{% static "js/jquery.min.js" %}"></script>
+
+    <script  src="{% static "js/index.js" %}"></script>
+
+</body>
+</html>

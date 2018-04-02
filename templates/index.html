@@ -1,0 +1,16 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+{% block title %} Welcome to my blog {% endblock %}
+
+{% block headmessage %}
+    <h3 style='font-family:楷体;'>List</h3>
+{% endblock %}
+{% block content %}
+    <div class='list-group'>
+    {% for post in posts %}
+        <li class='list-group-item'>
+            <a href='/post/{{ post.slug }}'> {{ post.title }} </a>
+        </li>
+    {% endfor %}
+    </div>
+{% endblock %}
